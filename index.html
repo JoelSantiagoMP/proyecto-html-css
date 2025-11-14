@@ -9,6 +9,23 @@
 <body>
     <header>
         <nav>
+            <div class="carousel">
+                <input type="radio" name="slides" id="slide1" checked>
+                <input type="radio" name="slides" id="slide2">
+                <input type="radio" name="slides" id="slide3">
+
+                <div class="slides">
+                    <div class="slide s1"><img src="img/carrusel1.jpg"></div>
+                    <div class="slide"><img src="img/carrusel2.jpg"></div>
+                    <div class="slide"><img src="img/carrusel3.jpg"></div>
+                </div>
+
+                <div class="navigation">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                </div>
+            </div>
             <h1>Patitas Felices</h1>
             <div class="menu-toggle" id="menuToggle">
                 <span></span>
@@ -27,7 +44,6 @@
         <div class="hero-content">
             <h2>¡Dales una segunda oportunidad!</h2>
             <p>Rescatamos, cuidamos y encontramos hogares llenos de amor para animales necesitados.</p>
-            <a href="pages/adopta.html" class="btn">Adopta</a>
         </div>
     </section>
     <section class="carousel">
