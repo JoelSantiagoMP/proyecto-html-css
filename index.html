@@ -3,108 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundación Patitas Felices - Inicio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Fundación Patitas Felices</title>
+
+    <!-- TU CSS REAL -->
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="carousel">
-                <input type="radio" name="slides" id="slide1" checked>
-                <input type="radio" name="slides" id="slide2">
-                <input type="radio" name="slides" id="slide3">
 
-                <div class="slides">
-                    <div class="slide s1"><img src="img/carrusel1.jpg"></div>
-                    <div class="slide"><img src="img/carrusel2.jpg"></div>
-                    <div class="slide"><img src="img/carrusel3.jpg"></div>
-                </div>
+    <header class="site-header">
+        <div class="header-inner">
+          <div class="logo">Patitas Felices</div>
+      
+          <!-- checkbox hack para menu movil -->
+          <input id="nav-toggle" type="checkbox" class="nav-toggle" />
+          <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+            <span></span>
+          </label>
+      
+          <nav class="site-nav">
+            <a href="pages/adopta.html">Adopta</a>
+            <a href="pages/apoyanos.html">Apóyanos</a>
+            <a href="pages/contacto.html">Contacto</a>
+          </nav>
+        </div>
+      </header>
+      
 
-                <div class="navigation">
-                    <label for="slide1"></label>
-                    <label for="slide2"></label>
-                    <label for="slide3"></label>
-                </div>
-            </div>
-            <h1>Patitas Felices</h1>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul id="navMenu">
-                <li><a href="index.html" class="active">Inicio</a></li>
-                <li><a href="pages/adopta.html">Adopta</a></li>
-                <li><a href="pages/apoyanos.html">Apoyanos</a></li>
-                <li><a href="pages/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- HERO -->
     <section class="hero">
-        <div class="hero-content">
-            <h2>¡Dales una segunda oportunidad!</h2>
-            <p>Rescatamos, cuidamos y encontramos hogares llenos de amor para animales necesitados.</p>
+        <div class="container">
+            <h1>Fundación Patitas Felices</h1>
+            <p>Rescatamos, cuidamos y damos una segunda oportunidad</p>
+            <a href="pages/adopta.html" class="btn-cta">Adopta</a>
         </div>
     </section>
+    
+
+    <!-- CARRUSEL -->
     <section class="carousel">
         <div class="slides">
-            <img src="img/slide1.jpg" alt="Perrito feliz">
-            <img src="img/slide2.jpg" alt="Gato rescatado">
-            <img src="img/slide3.jpg" alt="Voluntarios ayudando">
+            <img src="img/c1.jpg">
+            <img src="img/c2.jpg">
+            <img src="img/c3.jpg">
         </div>
     </section>
-    <section class="highlights">
-        <div class="card">
-            <h3>Adopta</h3>
-            <p>Encuentra tu compañero perfecto para toda la vida.</p>
-            <a href="pages/adopta.html">Ver más</a>
-        </div>
-        <div class="card">
-            <h3>Donaciones</h3>
-            <p>Ayuda a seguir ayudando a más animales.</p>
-            <a href="pages/apoyanos.html">Ayudar ahora</a>
-        </div>
-        <div class="card">
-            <h3>Voluntariado</h3>
-            <p>Únete a nuestro equipo de voluntarios.</p>
-            <a href="pages/voluntariado.html">Unirme</a>
-        </div>
-    </section>
-    <section class="vision-mision">
-        <div class="vision">
-            <h3>Visión</h3>
-            <p>Lograr un mundo donde todos los animales sean respetados y amados</p>
-        </div>
-    
-        <div class="mision">
-            <h3>Misión</h3>
-            <p>Rescatar, cuidar y ubicar animales a sus nuevas familias, promoviendo una adopción responsable</p>
-        </div>
-    </section>
-    <section class="galeria">
-        <h2>Nuestros rescates</h2>
-        <div class="gallery-grid">
-            <img src="img/rescate1.jpg" alt="">
-            <img src="img/rescate2.jpg" alt="">
-            <img src="img/rescate3.jpg" alt="">
-            <img src="img/rescate4.jpg" alt="">
 
+    <!-- SECCIONES DESTACADAS -->
+    <section class="destacados">
+        <a href="pages/adopta.html">🐶 Adopta</a>
+        <a href="pages/apoyanos.html">💛 Donaciones</a>
+        <a href="pages/contacto.html">🙋 Voluntariado</a>
+        <a href="pages/contacto.html">📩 Contacto</a>
+    </section>
+
+    <!-- MISIÓN Y VISIÓN -->
+    <section class="mision-vision">
+        <div class="mision">
+            <h2>Misión</h2>
+            <p>Nuestra misión es rescatar animales en condición vulnerable...</p>
+        </div>
+        <div class="vision">
+            <h2>Visión</h2>
+            <p>Aspiramos a crear una comunidad donde cada animal...</p>
         </div>
     </section>
+
+    <!-- GALERÍA -->
+    <section class="galeria">
+        <img src="img/g1.jpg">
+        <img src="img/g2.jpg">
+        <img src="img/g3.jpg">
+        <img src="img/g4.jpg">
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <p>© 2025 Fundación Patitas Felices | Desarrollado por Joel Martínez</p>
-        <p>📧 contacto@patitasfelices.org | 📱 +57 300 000 0000</p>
-        <div class="social-links">
-            <a href="#" aria-label="Facebook">📘</a>
-            <a href="#" aria-label="Instagram">📷</a>
-            <a href="#" aria-label="Twitter">🐦</a>
-            <a href="#" aria-label="YouTube">📺</a>
-        </div>
+        <p>© 2025 Fundación Patitas Felices</p>
+        <p>Contacto: fundacion@patitasfelices.org</p>
+        <p>Desarrollado por Joel</p>
     </footer>
-    <script>
-        document.getElementById('menuToggle')?.addEventListener('click', function() {
-            document.getElementById('navMenu')?.classList.toggle('active');
-        });
-    </script>
+
 </body>
-</html> 
+</html>
