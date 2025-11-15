@@ -1,0 +1,63 @@
+/* =============================================
+   PÁGINA APÓYANOS - ESTILOS ESPECÍFICOS
+   Archivo: css/apoyanos.css
+   ============================================= */
+
+/* Ya está cubierto por css/style.css pero aquí van estilos específicos adicionales */
+
+.support-section h3 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.support-option {
+    transition: var(--transition);
+}
+
+.support-option:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.support-option h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.support-option ul {
+    padding-left: 1.5rem;
+}
+
+.support-option ul li {
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+/* Estilos específicos para redes sociales en esta página */
+.support-option .social-links a {
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.support-option .social-links a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Centrado especial */
+.support-section div[style*="text-align: center"] {
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .support-option .social-links {
+        flex-direction: column !important;
+    }
+    
+    .support-option .social-links a {
+        width: 100%;
+        justify-content: center;
+    }
+}

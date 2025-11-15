@@ -1,0 +1,86 @@
+/* =============================================
+   PÁGINA ADOPTA - ESTILOS ESPECÍFICOS
+   Archivo: css/adopta.css
+   ============================================= */
+
+/* Estilos adicionales específicos para la página de adopción */
+
+.animals-grid {
+    padding-bottom: 3rem;
+}
+
+.animal-card {
+    position: relative;
+}
+
+/* Efecto hover en imagen */
+.animal-card img {
+    transition: transform 0.3s ease;
+}
+
+.animal-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Información adicional en tarjeta */
+.card-info span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-info span strong {
+    color: var(--primary);
+}
+
+/* Animación del botón */
+.btn-profile {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-profile::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-profile:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Badge con animación */
+.status-badge {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Grid responsivo mejorado */
+@media (max-width: 1024px) {
+    .animals-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .animals-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .animal-card img {
+        height: 200px;
+    }
+}

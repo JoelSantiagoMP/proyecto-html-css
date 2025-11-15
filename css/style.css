@@ -1,0 +1,339 @@
+/* =============================================
+   FUNDACIÓN PATITAS FELICES - ESTILOS GLOBALES
+   Archivo: css/style.css
+   ============================================= */
+
+/* VARIABLES */
+:root {
+    --bg: #F4F7F6;
+    --surface: #FFFFFF;
+    --primary: #2BA68B;
+    --primary-dark: #207F68;
+    --accent: #FFD766;
+    --text: #222;
+    --muted: #6B6B6B;
+    --success: #2ECC71;
+    --error: #E74C3C;
+
+    --radius: 14px;
+    --shadow: 0 6px 18px rgba(0,0,0,.08);
+    --transition: .25s ease;
+    --max-width: 1100px;
+
+    --font: "Inter", system-ui, sans-serif;
+}
+
+/* RESET */
+* { 
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* HEADER */
+header {
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1rem 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--primary-dark);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background: var(--primary);
+    color: white;
+}
+
+/* MENU TOGGLE (Móvil) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 28px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('../img/c1.jpg') center/cover;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--text);
+    padding: 0.8rem 2rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-profile {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* ANIMALS GRID */
+.animals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 3rem auto;
+    padding: 2rem 0;
+}
+
+.animal-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.animal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.animal-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* STATUS BADGES */
+.status-badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.status-badge.available {
+    background: var(--success);
+    color: white;
+}
+
+.status-badge.adopted {
+    background: #95A5A6;
+    color: white;
+}
+
+/* SUPPORT PAGE */
+.support-page {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 3rem auto;
+}
+
+.support-section {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.support-section h2 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.support-section h3 {
+    color: var(--primary-dark);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.support-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.support-option {
+    background: var(--bg);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+}
+
+.support-option h4 {
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+}
+
+.support-section ul {
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.support-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* FOOTER */
+footer {
+    background: var(--primary-dark);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+footer .social-links a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+footer .social-links a:hover {
+    transform: scale(1.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    header ul {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: var(--surface);
+        flex-direction: column;
+        width: 200px;
+        padding: 1rem;
+        box-shadow: var(--shadow);
+        border-radius: var(--radius);
+        display: none;
+    }
+
+    header ul.active {
+        display: flex;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .animals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .support-options {
+        grid-template-columns: 1fr;
+    }
+}

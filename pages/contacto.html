@@ -3,51 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto- Fundación Patitas Felices</title>
+    <title>Contacto - Fundación Patitas Felices</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contacto.css">
 </head>
 <body>
     <header>
         <nav>
-            <h1>
-                Contáctanos
-            </h1>
-            <p>Aquí tenemos disponibles nuestros métodos de contacto.</p>
+            <h1>Patitas Felices</h1>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="navMenu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="adopta.html">Adopta</a></li>
+                <li><a href="apoyanos.html">Apoyanos</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
         </nav>
     </header>
-    <section class="social-links">
-        <span class="link-1">
-            <strong>
-                Facebook:
-            </strong>
-            <a href="https://www.facebook.com/patitasfelices" target="_blank" aria-label="Facebook">Patitas Felices</a>
-        </span>
-        <br><br>
-        <span>
-            <strong>
-                Instagram:
-            </strong>
-            <a href="https://www.instagram.com/patitasfelices" target="_blank" aria-label="Instagram">@patitasfelices</a>
-        </span>
-        <br><br>
-        <span>
-            <strong>
-                Twitter/X:
-            </strong>
-            <a href="https://www.x.com/patitasfelices" target="_blank" aria-label="Twitter/X">@patitasfelices</a>
-        </span>
-        <br><br>
-        <span>
-            <strong>Teléfono/WhatsApp:</strong> +573238770327
-        </span>
-        <br><br>
-        <span>
-            <strong>
-                Correo electrónico:
-            </strong>
-            <a href="https://www.gmail.com" target="_blank" aria-label="Gmail">patitasfelices@gmail.com</a>
-        </span>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Contáctanos</h2>
+            <p>Estamos aquí para responder tus preguntas y ayudarte en el proceso de adopción</p>
+        </div>
     </section>
+
+    <div class="contact-container">
+        <div class="contact-layout">
+            <!-- FORMULARIO -->
+            <div class="form-wrapper">
+                <h2>Envíanos un Mensaje</h2>
+                <p class="form-intro">Completa el formulario y nos pondremos en contacto contigo lo antes posible. Los campos marcados con (*) son obligatorios.</p>
+                
+                <form id="contactForm" class="contact-form">
+                    <!-- Nombre y Apellidos -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre" class="required">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                            <span class="error-message">Por favor ingresa tu nombre</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="apellidos" class="required">Apellidos</label>
+                            <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" required>
+                            <span class="error-message">Por favor ingresa tus apellidos</span>
+                        </div>
+                    </div>
+
+                    <!-- Ciudad y Teléfono -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ciudad" class="required">Ciudad</label>
+                            <input type="text" id="ciudad" name="ciudad" placeholder="Tu ciudad" required>
+                            <span class="error-message">Por favor ingresa tu ciudad</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono" class="required">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="+57 300 123 4567" required>
+                            <span class="error-message">Por favor ingresa un teléfono válido</span>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email" class="required">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                        <span class="error-message">Por favor ingresa un correo válido</span>
+                    </div>
+
+                    <!-- Tipo de Consulta -->
+                    <div class="form-group">
+                        <label for="tipo-consulta" class="required">Tipo de Consulta</label>
+                        <select id="tipo-consulta" name="tipo-consulta" required>
+                            <option value="">Selecciona una opción...</option>
+                            <option value="adopcion">Adopción</option>
+                            <option value="donacion">Donación</option>
+                            <option value="voluntariado">Voluntariado</option>
+                            <option value="informacion">Información General</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                        <span class="error-message">Por favor selecciona un tipo de consulta</span>
+                    </div>
+
+                    <!-- Mensaje -->
+                    <div class="form-group">
+                        <label for="mensaje" class="required">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        <span class="error-message">Por favor escribe un mensaje</span>
+                    </div>
+
+                    <!-- Términos -->
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="acepto-terminos" required>
+                            <span>Acepto la política de privacidad y el tratamiento de mis datos personales *</span>
+                        </label>
+                        <span class="error-message">Debes aceptar los términos para continuar</span>
+                    </div>
+
+                    <!-- Botón -->
+                    <button type="submit" class="btn btn-submit">Enviar Mensaje</button>
+                </form>
+
+                <!-- EJEMPLOS DE VALIDACIÓN -->
+                <div class="validation-examples">
+                    <h3>Estados de Validación (Ejemplos Visuales)</h3>
+                    <p>A continuación se muestran ejemplos de cómo se verían los campos con errores y éxito:</p>
+                    
+                    <div class="form-group error">
+                        <label>Campo con Error</label>
+                        <input type="text" value="Campo incorrecto">
+                        <span class="error-message">Este campo tiene un error</span>
+                    </div>
+
+                    <div class="form-group success">
+                        <label>Campo Correcto</label>
+                        <input type="text" value="Campo validado correctamente">
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIDEBAR DE CONTACTO -->
+            <aside class="contact-sidebar">
+                <div class="contact-card">
+                    <h3>Información de Contacto</h3>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <strong>Correo Electrónico</strong>
+                            <p>contacto@patitasfelices.org</p>
+                            <p>adopciones@patitasfelices.org</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <div>
+                            <strong>Teléfono / WhatsApp</strong>
+                            <p>+57 323 877 0327</p>
+                            <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                            <p>Sábados: 9:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>Dirección</strong>
+                            <p>Calle 123 #45-67</p>
+                            <p>Piedecuesta, Santander</p>
+                            <p>Colombia</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="contact-icon">⏰</span>
+                        <div>
+                            <strong>Horario de Visitas</strong>
+                            <p>Sábados y Domingos</p>
+                            <p>10:00 AM - 4:00 PM</p>
+                            <p><em>Visitas con cita previa</em></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div class="contact-card">
+                    <h3>Síguenos en Redes</h3>
+                    <p>Mantente al día con nuestras actividades</p>
+                    
+                    <div class="social-vertical">
+                        <a href="https://www.facebook.com/patitasfelices" target="_blank" class="social-item">
+                            <span>📘</span>
+                            <div>
+                                <strong>Facebook</strong>
+                                <p>@PatitasFelices</p>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/patitasfelices" target="_blank" class="social-item">
+                            <span>📷</span>
+                            <div>
+                                <strong>Instagram</strong>
+                                <p>@patitas_felices</p>
+                            </div>
+                        </a>
+                        <a href="https://www.twitter.com/patitasfelices" target="_blank" class="social-item">
+                            <span>🐦</span>
+                            <div>
+                                <strong>Twitter</strong>
+                                <p>@PatitasFelices</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="contact-card cta-card">
+                    <h3>¿Prefieres llamarnos?</h3>
+                    <p>Nuestro equipo está listo para atenderte</p>
+                    <a href="tel:+573238770327" class="btn btn-block">Llamar Ahora</a>
+                </div>
+            </aside>
+        </div>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>¿Cuál es el proceso de adopción?</h4>
+                    <p>El proceso incluye: llenar el formulario de solicitud, entrevista personal, visita domiciliaria (opcional), y firma del contrato de adopción.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>¿Cuánto cuesta adoptar?</h4>
+                    <p>Solicitamos una contribución voluntaria que cubre vacunas, esterilización y microchip. El monto sugerido es de $150.000 COP.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>¿Puedo conocer al animal antes?</h4>
+                    <p>¡Por supuesto! Agendamos visitas los fines de semana para que conozcas a tu futuro compañero.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>¿Hacen seguimiento post-adopción?</h4>
+                    <p>Sí, realizamos seguimiento durante el primer año para asegurar que todo vaya bien.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
     <footer>
         <p>© 2025 Fundación Patitas Felices | Desarrollado por Joel Martínez</p>
         <p>📧 contacto@patitasfelices.org | 📱 +57 300 000 0000</p>
@@ -62,6 +251,13 @@
     <script>
         document.getElementById('menuToggle')?.addEventListener('click', function() {
             document.getElementById('navMenu')?.classList.toggle('active');
+        });
+
+        // Simulación de validación (solo visual)
+        const form = document.getElementById('contactForm');
+        form?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Mensaje enviado exitosamente! (Simulación)');
         });
     </script>
 </body>
