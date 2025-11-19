@@ -182,22 +182,48 @@ body, html {
 /* --------------------------------------
    CARRUSEL
 ---------------------------------------- */
-.carousel {
-    overflow: hidden;
-    max-height: 280px;
-}
 
-.carousel .slides {
-    display: flex;
-    width: 300%;
-    animation: slide 12s infinite;
+/* Elimina el margen lateral blanco usando width:100% y ajusta la imagen */
+.carousel {
+    width: 100%;
+    max-width: 100vw;
+    height: 280px;               /* Altura fija */
+    overflow: hidden;
+    position: relative;
 }
 
 .carousel img {
     width: 100%;
-    object-fit: cover;
+    height: 100%;
+    object-fit: cover;           /* Recorta */
+    object-position: center;     /* 🔥 Centra la imagen */
 }
 
+
+
+.carousel .slides {
+    display: flex;
+    width: 300%; /* 3 imágenes */
+    height: 100%;
+    animation: slide 12s infinite;
+}
+
+
+
+/* Carrusel responsivo: menor altura y sin bordes en móvil */
+@media (max-width: 600px) {
+    .carousel {
+        height: 180px;
+    }
+    .carousel img {
+        height: 180px;
+    }
+    .carousel .slides {
+        width: 300%;
+    }
+}
+
+/* Ajuste de keyframes para desplazamiento por imagen */
 @keyframes slide {
     0% { transform: translateX(0); }
     33% { transform: translateX(-100%); }
@@ -293,6 +319,7 @@ body, html {
    GALERÍA
 ---------------------------------------- */
 .galeria {
+    margin-top: 50px;
     width: 90%;
     max-width: var(--max-width);
     margin: auto;
@@ -302,6 +329,7 @@ body, html {
 }
 
 .galeria img {
+    margin-top: 50px;
     width: 100%;
     height: 200px;
     object-fit: cover;
