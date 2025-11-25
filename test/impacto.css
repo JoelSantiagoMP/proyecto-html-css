@@ -1,0 +1,160 @@
+:root {
+    --bg: #F4F7F6;
+    --surface: #FFFFFF;
+    --primary: #2BA68B;
+    --primary-dark: #207F68;
+    --accent: #FFD766;
+    --text: #222;
+    --muted: #6B6B6B;
+    --success: #2ECC71;
+    --error: #E74C3C;
+
+    --radius: 14px;
+    --shadow: 0 6px 18px rgba(0,0,0,.08);
+    --transition: .25s ease;
+    --max-width: 1100px;
+
+    --font: "Inter", system-ui, sans-serif;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    line-height: 1.6;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+header p {
+    font-size: 17px;
+    color: var(--surface);
+    
+}
+header {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: black;
+}
+
+
+.contenedor-grafico .barra1 {
+    position: sticky;
+    height: auto;
+    padding: 20px;
+    width: 50%;
+    background-color:  lightcoral;
+}
+
+.contenedor-grafico .barra2 {
+    position: sticky;
+    height: auto;
+    padding: 20px;
+    width: 70%;
+    background-color:  lightgray;
+}
+
+.contenedor-grafico .barra3 {
+    position: sticky;
+    height: auto;
+    padding: 20px;
+    width: 85%;
+    background-color:  lightblue;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+/* -----------------------------------------------------------
+   TARJETAS DE PRODUCTO
+----------------------------------------------------------- */
+.item {
+    background: white;
+    padding: 15px;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* hace que TODAS las imágenes tengan la misma altura y que entren en las tarjetas de grid calculando su width, 
+asignando una altura especifica y ordenarle que cubra en object fit*/
+.item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.item p {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    min-height: 40px; /* evita que textos cortos rompan la altura */
+}
+
+.item h2 {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    min-height: 40px;
+}
+
+.paginas {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.paginas h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #111827;
+    border-left: 6px solid #2563eb;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.contribuir p {
+    font-size: 17px;
+}
+
+footer {
+    background: var(--primary-dark);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    font-size: .9rem;
+}
+
+footer p {
+    margin: .3rem 0;
+} 
+
+/* */
